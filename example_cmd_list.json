@@ -1,0 +1,21 @@
+{
+  "version": "0.10.0000",
+  "common": [
+    { "key": "uname",       "type": "string", "cmd_list": [ "uname",  "-a" ] },
+    { "key": "py_version",  "type": "string", "cmd_list": [ "python", "--version" ] },
+    { "key": "py_uname",    "type": "json",   "cmd_list": [ "python", "-c", "import platform,json ; print(json.dumps(platform.uname()))" ] }
+  ],
+
+  "comment1": "create method calls, or run command lines - command lines don't allow interpretation of the results like get nvme list and get details for each drive.",
+
+  "linux": [
+    { "key": "pci_base",    "type": "dict",   "method": "GetPcieBaseline('linux')" },
+    { "key": "pci_detail",  "type": "dict",   "method": "GetPcieDetails('linux')" },
+    { "key": "nvme_detail", "type": "dict",   "method": "GetNvmeDetails('linux')" }
+  ],
+  "vmkernel": [
+    { "key": "pci_base",    "type": "dict",   "method": "GetPcieBaseline('vmkernel')" },
+    { "key": "pci_detail",  "type": "dict",   "method": "GetPcieDetails('vmkernel')" },
+    { "key": "nvme_detail", "type": "dict",   "method": "GetNvmeDetails('vmkernel')" }
+  ]
+}

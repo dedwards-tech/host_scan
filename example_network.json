@@ -1,0 +1,16 @@
+{
+  "version": "0.10.0000",
+  "credentials": {
+    "file_name": "<path_to_encrypted_file_for_pwd>",
+    "ref_list": [
+      { "ref_id": "infra_admin", "user_name":  "root" },
+      { "ref_id": "linux_user",  "user_name":  "jenkins" },
+      { "ref_id": "esxi_user",   "user_name":  "root" }
+    ]
+  },
+  "hosts": [
+    { "ref_id":  "router_01", "server_ip": "",             "fqdn": "",                  "credential": "infra_admin" },
+    { "ref_id":  "linux_01",  "server_ip": "",             "fqdn": "",                  "credential": "linux_user" },
+    { "ref_id":  "esxi_01",   "server_ip": "",             "fqdn": "",                  "credential": "esxi_user" }
+  ]
+}
