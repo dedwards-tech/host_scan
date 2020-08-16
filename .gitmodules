@@ -1,0 +1,3 @@
+[submodule "rubylib"]
+	path = rubylib
+	url = git@github.com:dedwards-tech/rubylib.git
