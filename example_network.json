@@ -1,8 +1,6 @@
 {
   "version": "0.10.0000",
-  "credentials": {
-    "file_name": "<path_to_encrypted_file_for_pwd>"
-  },
+  "credential_file": "example_passwords.json",
   "hosts": [
     { "ref_id":  "router_01", "server_ip": "",             "fqdn": "",                  "credential_ref": "infra_admin" },
     { "ref_id":  "linux_01",  "server_ip": "",             "fqdn": "",                  "credential_ref": "linux_user" },
